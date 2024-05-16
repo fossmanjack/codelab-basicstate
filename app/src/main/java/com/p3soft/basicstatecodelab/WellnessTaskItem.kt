@@ -43,10 +43,12 @@ fun WellnessTaskItem( // stateless
     }
 }
 
+/* No longer needed -- we hoisted checkedState to the List level
 @Composable
 fun WellnessTaskItem( // stateful overload
     taskName: String,
     modifier: Modifier = Modifier,
+    onClose: () -> Unit,
 ) {
     var checkedState by rememberSaveable { mutableStateOf(false) }
 
@@ -54,7 +56,9 @@ fun WellnessTaskItem( // stateful overload
         taskName = taskName,
         checked = checkedState,
         onCheckedChange = { newValue -> checkedState = newValue },
-        onClose = {},
+        onClose = onClose,
         modifier = modifier,
     )
 }
+
+ */
