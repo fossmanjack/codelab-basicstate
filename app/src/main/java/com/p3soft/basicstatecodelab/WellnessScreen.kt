@@ -2,8 +2,15 @@ package com.p3soft.basicstatecodelab
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.foundation.layout.Column
+
 
 @Composable
 fun WellnessScreen(modifier: Modifier = Modifier) {
-    StatefulCounter(modifier)
+    Column(
+        modifier = modifier,
+    ) {
+        StatefulCounter()
+        WellnessTasksList()
+    }
 }
